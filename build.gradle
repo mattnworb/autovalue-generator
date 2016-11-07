@@ -1,0 +1,32 @@
+group = 'com.mattnworb'
+version = '1.0-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven'
+
+    repositories {
+        jcenter()
+    }
+}
+
+project(':core') {
+    dependencies {
+        compile 'com.google.auto.service:auto-service:1.0-rc2'
+        compile 'com.squareup:javapoet:1.7.0'
+        compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.0'
+        compile 'com.fasterxml.jackson.core:jackson-databind:2.6.0'
+
+        testCompile 'junit:junit:4.12'
+        testCompile 'com.google.testing.compile:compile-testing:0.10'
+    }
+}
+
+project(':example') {
+    dependencies {
+        compile project(':core')
+        compile 'com.fasterxml.jackson.core:jackson-annotations:2.6.0'
+
+        testCompile 'junit:junit:4.12'
+    }
+}
