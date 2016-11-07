@@ -85,3 +85,12 @@ input classes at the same time the compiler does and emit the test classes.
 [autovalue]: https://github.com/google/auto/tree/master/value
 [autovalue-builders]: https://github.com/google/auto/blob/master/value/userguide/builders.md
 [JavaPoet]: https://github.com/square/javapoet
+
+# How to build
+
+```sh
+$ ./gradlew build
+```
+
+# How to run
+TODO
